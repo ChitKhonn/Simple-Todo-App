@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header>
-      <h2 class="title mb-4">Form Validation Page</h2>
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html">Alert Box</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="changeView('todo')" href="./todo.html"
-            >Todo</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            onclick="changeView('form')"
-            href="./form.html"
-            >Form</a
-          >
-        </li>
-      </ul>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 3</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <div class="login">
-      <form id="myForm" action="">
-        <label for="">Name</label>
-        <input id="nameValidate" type="text" /><br />
-        <div id="errorName" style="display: none; color: red;">Name must include a lowercase letter and a number</div>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-        <label for="">Email</label>
-        <input id="email" type="email" /><br />
-        <div id="errorEmail" style="display: none; color: red;" >Invalid email format</div>
-        <br />
+<body>
+  <header>
+    <h2 class="title p-3">Form Validation Page</h2>
+    <hr class="m-0">
+    <ul class="nav nav-underline  ps-3">
+      <li class="nav-item">
+        <a class="nav-link px-3" href="index.html">Alert Box</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3" href="./todo.html">Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 active text-primary" href="#">Form</a>
+      </li>
+    </ul>
+    <hr class="m-0">
+  </header>
 
-        <label for="">Password</label>
-        <input id="password" type="text" /><br />
-        <div  id="errorPassword" style="display: none; color: red;">Password must be at least 6 character</div>
+  <div class="login d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <form id="myForm" action="" class="col-3 p-5"
+      style="box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+      <h3>Login</h3>
+      <label for="">Name</label>
+      <input class=" form-control" id="nameValidate" type="text"
+        style="box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.01);" /><br />
+      <span id="errorName" style="display: none; color: red;">Name must include a lowercase letter and a number</span>
 
-        <button type="submit">Log In</button>
-      </form>
-    </div>
+      <label for="">Email</label>
+      <input class="form-control" id="email" type="email" style="box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.01);" /><br />
+      <span id="errorEmail" style="display: none; color: red;">Invalid email format</span>
+      <br />
 
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./main.js"></script>
-  </body>
+      <label for="">Password</label>
+      <input class="form-control" id="password" type="text"
+        style="box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.01);" /><br />
+      <span id="errorPassword" style="display: none; color: red;">Password must be at least 6 character</span>
+
+      <button type="submit" class="btn btn-primary mb-3">Log In</button>
+    </form>
+  </div>
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>
