@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="title mb-4">Form Validation Page</h2>
+      <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Alert Box</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="changeView('todo')" href="./todo.html"
+            >Todo</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            onclick="changeView('form')"
+            href="./form.html"
+            >Form</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <div class="login">
+      <form id="myForm" action="">
+        <label for="">Name</label>
+        <input id="nameValidate" type="text" /><br />
+        <div id="errorName" style="display: none; color: red;">Name must include a lowercase letter and a number</div>
+
+        <label for="">Email</label>
+        <input id="email" type="email" /><br />
+        <div id="errorEmail" style="display: none; color: red;" >Invalid email format</div>
+        <br />
+
+        <label for="">Password</label>
+        <input id="password" type="text" /><br />
+        <div  id="errorPassword" style="display: none; color: red;">Password must be at least 6 character</div>
+
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
