@@ -6,6 +6,11 @@
     <title>Assignment 3</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -23,10 +28,25 @@
         </li>
       </ul>
     </header>
+    <h3 class="title">Todo App</h3>
 
-<h1>Todo</h1>
+    <div>
+      <div>
+        <input type="text" id="searchInput" placeholder="Search Todo" />
+      </div>
+
+      <p id="todoList">
+        <!-- Tasks will be added here dynamically -->
+      </p>
+
+      <form action="" id="todoForm">
+        <input id="todoData" type="text" placeholder="Enter new todo" /><br />
+        <button type="submit" id="todoButton">Add Todo</button>
+      </form>
+    </div>
 
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./todo.js"></script>
   </body>
 </html>
