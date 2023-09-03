@@ -23,19 +23,28 @@ function updateTaskList() {
     todoList.innerHTML = '';
 
     tasks.forEach(task => {
-        
+
         const p = document.createElement('p');
         p.innerHTML = `
            
-            <span>${task}</span>
-            <button onclick="deleteTask(${task.id})">Delete</button>
+             <div class="col-12 ">
+      <div class="d-flex justify-content-between">
+        <span>${task}</span>
+
+        <span class="material-symbols-outlined" onclick="deleteTask(${task.id})" style="color: red;">
+          delete
+
+        </span>
+      </div>
+      <hr class="mb-0">
+    </div>
         `;
-        
+
         todoList.appendChild(p);
     });
 }
 function deleteTask(taskId) {
-    const taskIndex = tasks.findIndex(function(task) {
+    const taskIndex = tasks.findIndex(function (task) {
         return task.id === taskId;
     });
     if (taskIndex !== -1) {
@@ -54,28 +63,37 @@ function searchTasks() {
     updateTaskList(filteredTasks);
 }
 
-function updateTaskList(filteredTasks = tasks) { 
+function updateTaskList(filteredTasks = tasks) {
     todoList.innerHTML = '';
 
     filteredTasks.forEach(function (task) {
         const p = document.createElement('p');
         p.innerHTML = `
            
-            <span>${task}</span>
-            <button  onclick="deleteTask(${task.id})">Delete</button>
+              <div class="col-12 ">
+      <div class="d-flex justify-content-between">
+        <span>${task}</span>
+
+        <span class="material-symbols-outlined" onclick="deleteTask(${task.id})" style="color: red;">
+          delete
+
+        </span>
+      </div>
+      <hr class="mb-0">
+    </div>
         `;
-        
+
         todoList.appendChild(p);
     });
 }
-todoForm.addEventListener('submit', function (e){
+todoForm.addEventListener('submit', function (e) {
     const data = todoInput.value;
     e.preventDefault();
     addTask(data);
-    
+
 });
 
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
     searchTasks();
 });
 updateTaskList();

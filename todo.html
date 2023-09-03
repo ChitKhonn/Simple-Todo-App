@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 3</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header>
-      <h2 class="title mb-4">Todo Page</h2>
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html">Alert Box</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="./todo.html">Todo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./form.html">Form</a>
-        </li>
-      </ul>
-    </header>
-    <h3 class="title">Todo App</h3>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <h2 class="title p-3">Todo Page</h2>
+    <hr class="m-0">
+    <ul class="nav nav-underline  ps-3">
+      <li class="nav-item">
+        <a class="nav-link px-3" href="./index.html">Alert Box</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 active text-primary" href="#">Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 " href="./form.html">Form</a>
+      </li>
+    </ul>
+    <hr class="m-0">
+  </header>
+
+  <div class=" d-flex justify-content-center align-items-center" style="height: 80vh;"">
+    
     <div>
-      <div>
-        <input type="text" id="searchInput" placeholder="Search Todo" />
-      </div>
-
-      <p id="todoList">
-        <!-- Tasks will be added here dynamically -->
-      </p>
-
-      <form action="" id="todoForm">
-        <input id="todoData" type="text" placeholder="Enter new todo" /><br />
-        <button type="submit" id="todoButton">Add Todo</button>
-      </form>
+      <h3 class=" title">Todo App</h3>
+    <div class="mb-3">
+      <input type=" text" class="form-control" id="searchInput" placeholder="Search Todo" />
     </div>
+    <p id="todoList">
 
-    <script src="./js/bootstrap.min.js"></script>
-    <!-- <script src="./main.js"></script> -->
-    <script src="./todo.js"></script>
-  </body>
+      <!-- Tasks will be added here dynamically -->
+    </p>
+
+    <form action="" id="todoForm">
+      <input id="todoData" type="text" class="form-control" placeholder="Enter new todo" /><br />
+      <button type="submit" class="btn btn-primary mb-3" id="todoButton">Add Todo</button>
+
+    </form>
+  </div>
+  </div>
+  <script src="./js/bootstrap.min.js"></script>
+  <!-- <script src="./main.js"></script> -->
+  <script src="./todo.js"></script>
+</body>
+
 </html>

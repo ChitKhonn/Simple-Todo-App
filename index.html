@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header>
-      <h2 class="title mb-4">Alert Box Page</h2>
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link active" href="./alert.html">Alert Box</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="changeView('todo')" href="./todo.html">Todo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="changeView('form')" href="./form.html">Form</a>
-        </li>
-      </ul>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 3</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <section class="main">
-      <div class="center">
-        <button
-          onclick="show_alert('Payment successful ','Your payment has successful submitted.We have sent you and email with all of the details of your order')"
-        >
-        Alert dialog
-        </button>
-      </div>
-      <div class="modal" id="modal-alert">
-        <div class="modal-overlay" tabindex="-1">
-          <div class="modal-container">
-            <div class="modal-header">
-              <h2 class="modal-title" id="modal-alert-title">Error</h2>
-            </div>
-            <div class="modal-text">
-              <p id="modal-alert-content">Something went wrong.</p>
-            </div>
-            <div class="modal-buttons">
-              <button
-                class="modal-button"
-                id="modal-button-primary"
-                onclick="document.getElementById('modal-alert').style.display = 'none';">
-                Close
-              </button>
-            </div>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <h2 class="title p-3">Alert Box Page</h2>
+    <hr class="m-0">
+    <ul class="nav nav-underline ps-3">
+      <li class="nav-item ">
+        <a class="nav-link active text-primary px-3" href="#">Alert Box</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 text-primary" href="./todo.html">Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 text-primary" href="./form.html">Form</a>
+      </li>
+    </ul>
+    <hr class="m-0">
+  </header>
+
+  <section class="container-fluid d-flex justify-content-center align-items-center" style="height: 87vh">
+    <div class="">
+
+      <button class="btn btn-secondary" style="background-color:#E5E5E5; color: #70A0F1;border: 0; font-weight: bold;"
+        onclick="show_alert('Payment successful ','Your payment has successful submitted.We have sent you and email with all of the details of your order')">
+        Open dialog
+      </button>
+    </div>
+    <div class="modal" id="modal-alert">
+      <div class="modal-overlay" tabindex="-1">
+        <div class="modal-container w-25 " style="border-radius: 15px;">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-alert-title">Error</h2>
+          </div>
+          <div class="modal-text">
+            <p id="modal-alert-content">Something went wrong.</p>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn btn-primary text-primary"
+              style="background-color: #DBE9FE;color:#375099;font-weight: bold; border: 0;" id="modal-button-primary"
+              onclick="document.getElementById('modal-alert').style.display = 'none';">
+              Close
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./main.js"></script>
-  </body>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>
